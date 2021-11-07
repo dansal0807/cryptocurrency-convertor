@@ -1,0 +1,2 @@
+Esse projeto tem por intenção ser um conversor de cryptocurrencies, tais como bitcoin (BTC), ether (ETH), cardano (ADA).
+Sua intenção é converter as moedas mais principais do mercado, portanto aquelas lançadas nas DEXs, como a Uniswap, não serão abarcadas.
