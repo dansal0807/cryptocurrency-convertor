@@ -15,6 +15,7 @@ parameters = {
 
 #Aqui estão os headers do link, incluindo a chave pessoal de cada desenvolvedor. Por razões de segurança, eu, Daniel Saldanha,
 #escondi minha chave em um arquivo pessoal. Caso deseje utilizar esta API com este código, é necessário criar uma própria.
+#Para mais informações de como criar sua própria chave, acesse: https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide
 headers = {
   'Accepts': 'application/json',
   'X-CMC_PRO_API_KEY': apikey,
@@ -48,7 +49,7 @@ try:
     else:
       pass
   
-  qunt = float(input("diga-me quanto você quer converter(da primeira moeda):"))
+  qunt = float(input("diga-me quanto você quer converter da primeira moeda:"))
   qunt_dol = first_price_num*qunt
   qunt_end = round(qunt_dol/second_price_num, 3)
   print(f"... \n {qunt} {first_price} equivalem a: {qunt_dol} USD \n... Sendo 1 {second_price} = {second_price_num}\n {qunt} {first_price} equivale a {qunt_end} {second_price}")
