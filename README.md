@@ -1,14 +1,14 @@
 [Pt-Br]
 
 Esse projeto tem por intenção ser um conversor de cryptocurrencies, tais como bitcoin (BTC), ether (ETH), cardano (ADA) entre outras moedas.
-Sua intenção é converter as moedas mais principais do mercado, o programa pega as 100 primeiras listadas na coingecko (https://www.coingecko.com/pt).
+Sua intenção é converter as moedas mais principais do mercado, o programa pega as 100 primeiras listadas na coinmarket (https://coinmarketcap.com/).
 
 O projeto necessita de uma chave de API gerada pela coingecko. Uma das intenções do projeto é a articulação entre APIs e um processo lógico próprio do programa.
 
 -----
 [En]
 
-This project is a cryptocurrencies convertor, such as Bitcoin (BTC), ether (ETH), cardano (ADA) and others. Its intention is to convert different coins listed in the market. The code takes the first one hundred coins listed on coingeck (https://www.coingecko.com/).
+This project is a cryptocurrencies convertor, such as Bitcoin (BTC), ether (ETH), cardano (ADA) and others. Its intention is to convert different coins listed in the market. The code takes the first one hundred coins listed on coinmarketi (https://coinmarketcap.com/).
 
 
 
