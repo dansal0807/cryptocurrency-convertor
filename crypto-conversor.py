@@ -56,3 +56,57 @@ try:
 
 except (ConnectionError, Timeout, TooManyRedirects) as e:
   print(e)
+
+#  --------------------------------------------
+#Some possible changes, translated to english:
+
+from requests import Request, Session
+from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
+import json
+from keys import apikey
+
+url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
+parameters = {
+  'start':'1',
+  'limit':'100',
+  'convert':'USD'
+}
+
+headers = {
+  'Accepts': 'application/json',
+  'X-CMC_PRO_API_KEY': apikey,
+}
+
+session = Session()
+session.headers.update(headers)
+
+first_price = input("Enter the symbol of the currency you want to convert from:")
+first_price = first_price.upper()
+second_price = input("Enter the symbol of the currency you want to convert to:")
+second_price = second_price.upper()
+
+try:
+  response = session.get(url, params=parameters)
+  data = json.loads(response.text)
+
+  for entry in data['data']:
+    if entry['symbol'] == first_price:
+      first_price_num = round(entry['quote']['USD']['price'], 3)
+      print(f"The current price of {first_price} is: {first_price_num} USD")
+    else:
+      pass
+
+  for entry in data['data']:     
+    if entry['symbol'] == second_price:
+      second_price_num = round(entry['quote']['USD']['price'], 3)
+      print(f"The current price of {second_price} is: {second_price_num} USD")
+    else:
+      pass
+  
+  qunt = float(input("Enter the amount you want to convert from the first currency:"))
+  qunt_dol = first_price_num*qunt
+  qunt_end = round(qunt_dol/second_price_num, 3)
+  print(f"\n {qunt} {first_price} is equivalent to: {qunt_dol} USD \n 1 {second_price} is equal to {second_price_num} USD \n {qunt} {first_price} is equivalent to {qunt_end} {second_price}")
+
+except (ConnectionError, Timeout, TooManyRedirects) as e:
+  print(e)
