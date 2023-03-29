@@ -5,6 +5,8 @@ from keys import apikey
 import datetime
 from datetime import date, timedelta
 
+
+#TODO: Colocar em funções todo esse código, de maneira responsiva.
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 #parâmetros exigidos pela URL do API do coinmarket; significa que ele analise as últimas 100 moedas mais atualizadas e usa o USD como a moeda padrão.""
 parameters = {
